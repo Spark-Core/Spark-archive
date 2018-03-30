@@ -1,0 +1,67 @@
+---
+layout: 0.0.6/largePage
+column: 0.0.6/headers/documentation.html
+color: is-danger
+title: Permissions
+subtitle: Lock certain commands to certain people.
+menu: 0.0.6/menus/documentation/documentation.html
+---
+<section class="section">
+    <h1 class="title"> What are Permission files? </h1>
+    <p>Permission files check a certain condition before running a <a href="/0.0.6/documentation/command">command</a>, to check if the user of the command has the permission to execute it. You specify this by adding the level export on the command corresponding to the level on the permission file. If you want to do something before a command executes but after the permission has been cleared, use a <a href="/0.0.6/documentation/message_functions/">message function</a>.</p>
+
+    <h1 class="title"> Default permissions: <h1>
+    <p> Spark has default permission files added for easy startup, ofcourse you can overwrite them if you don't want to use them.</p>
+    <div class="content">
+        <ul>
+            <li>
+                <h3 class="subtitle">admin.js | Level 4</h3>
+                <p>Checks if the user has a role matching the admin role specified in your initial config <code>adminRole: "role-name"</code> If no role is specified or the user doesn't have a role like this the bot will not execute the command.</p>
+            </li>
+            <li>
+                <h3 class="subtitle">moderator.js | Level 3</h3>
+                <p>Checks if the user has a role matching the mod role specified in your initial config <code>modRole: "role-name"</code> If no role is specified or the user doesn't have a role like this the bot will not execute the command.</p>
+            </li>
+            <li>
+                <h3 class="subtitle">member.js | Level 0</h3>
+                <p>Always allows execution of the command.</p>
+            <li>
+                <h3 class="subtitle">owner.js | Level 10</h3>
+                <p>Allows execution of command if the command is run by the creator of the bot.</p>
+            </li>
+        </ul>
+
+    </div>
+</section>
+<section class="section">
+    <h1 class="title">Adding permission files</h1>
+    <pre>exports.name = "name-here"
+exports.level = 0
+exports.filter = (client, message) => {
+
+
+return false; // Allows execution of the commad.
+return true;  // Stops execution of the command.
+
+}</pre>
+</section>
+<section class="section">
+    <h1 class="title"> Possible exports</h1>
+    <div class="content" <ul>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .name <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">String</span></div><span class="tag is-danger">Required</span></div></h3>
+            <p> Describes the name of the Permission. <i class="fas fa-exclamation-circle"></i> Must be unique</p>
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .level <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">Number</span></div><span class="tag is-danger">Required</span></div></h3>
+            <p>This is the level which will get checked by the command file.</p>
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .filter <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">function</span></div><span class="tag is-danger">Required</span></div></h3>
+            <p> Code that will be executed to see if the user has permission. <i class="fas fa-exclamation-circle"></i> Must return a boolean (<strong>true</strong> for stopping executing, <strong>false</strong> for letting it go through)</p>
+        </li>
+        </ul>
+    </div>
+    <h1 class="title"> Stopping commands from executing</h1>
+    <p> To stop a command from executing return <strong> true</strong> to make it stop executing, or <strong> false </strong> to let it continue.</p>
+</section>

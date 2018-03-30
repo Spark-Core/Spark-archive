@@ -1,0 +1,45 @@
+---
+layout: 0.0.6/largePage
+column: 0.0.6/headers/documentation.html
+color: is-primary
+title: Message functions
+subtitle: Observe behaviour of messages or commands.
+menu: 0.0.6/menus/documentation/documentation.html
+---
+<section class="section">
+    <h1 class="title"> Creating a message function </h1>
+    <p> To create a message function you will have to create a new .js file inside the functions/messages folder.<br> This is what a default message function looks like. </p>
+    <br>
+    <pre>exports.name = "name-mf"
+exports.type = ["commands", "messages"];
+exports.function = function(client, message, command) {
+
+  // execute your code here
+
+}</pre>
+</section>
+<section class="section">
+    <h1 class="title"> Possible exports</h1>
+    <div class="content" <ul>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .name <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">String</span></div><span class="tag is-danger">Required</span></div></h3>
+            <p> Describes the name of the message function. <i class="fas fa-exclamation-circle"></i> Must be unique</p>
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .type <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">Array(string) / null</span></div><div class="tags has-addons"><span class="tag is-purple">Default</span><span class="tag">["messages"]</span></div></div></h3>
+            <p>The type of the message function that will allow it to be triggered before a message, command or both.</p>
+            <ul>
+                <li>message | Only messages</li>
+                <li>command | Only commands</li>
+                <li>all | Both messages and commands</li>
+            </ul>
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .function <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">function</span></div><span class="tag is-danger">Required</span></div></h3>
+            <p> Code that will be executed before a command runs.</p>
+        </li>
+        </ul>
+    </div>
+    <h1 class="title"> Stopping commands from executing</h1>
+    <p> To stop a command from executing return <strong> true</strong> to make it stop executing, or <strong> false </strong> to let it continue.</p>
+</section>

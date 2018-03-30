@@ -1,0 +1,64 @@
+---
+layout: 0.0.6/largePage
+column: 0.0.6/headers/documentation.html
+color: is-info
+title: Commands
+subtitle: Execute your code on certain text triggers.
+menu: 0.0.6/menus/documentation/documentation.html
+---
+
+<section class="section">
+    <h1 class="title"> Creating a command </h1>
+    <p> To create a command you will have to create a new .js file inside the commands/ folder.<br> This is what a default command looks like. </p>
+    <br>
+    <pre>exports.name = "name-cmd"
+exports.level = 0;
+exports.aliases = ["alias-1", "alias-2"]
+
+exports.command = function(client, message) {
+
+  // Execute code here.
+
+}</pre>
+</section>
+<section class="section">
+    <h1 class="title"> Possible exports</h1>
+    <div class="content" <ul>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .name <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">String</span></div><span class="tag is-danger">Required</span></div></h3>
+            <p> Describes the name of the message function. <i class="fas fa-exclamation-circle"></i> Must be unique</p>
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .level <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">Number / null</span></div><div class="tags has-addons"><span class="tag is-purple">Default</span><span class="tag">0</span></div></div></h3>
+            <p>Level determines who can use this command, see the <a href="/0.0.6/documentation/permissions/">permission instructions</a> for more information.</p>
+
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .ignoredChannels <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">Array (String) / null</span></div><div class="tags has-addons"><span class="tag is-purple">Default</span><span class="tag">["dm", "group"]</span></div></div></h3>
+            <p> Code that will be executed before a command runs.</p>
+            <small>Possible channel types:</small>
+            <ul>
+                <li>"dm"</li>
+                <li>"group"</li>
+                <li>"text"</li>
+            </ul>
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .komada <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">Boolean / null</span></div><div class="tags has-addons"><span class="tag is-purple">Default</span><span class="tag">false</span></div></div></h3>
+            <p>Use this export if you're using a komada command file.</p>
+
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .command <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">function</span></div><span class="tag is-danger">Required</span></div></div></h3>
+            <p>The code that will be executed on command execution.</p>
+            <small> Arguments</small>
+            <ul>
+                <li> client <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">Client Object</span></div><li>
+                <li> message <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">Message Object</span></div><li>
+        </li>
+        </ul>
+    </div>
+    <h1 class="title"> Komada support <span class="tag is-warning"> Deprecated </span></h1>
+    <p> This framework does support Komada's command system, but it does not use any of their other systems. This feature will likely be removed at a near point in the future, when more features get added that Komada doesn't have / handles differently.</p>
+    <strong> Editor's note (31th of march 2018) | Komada support has been dropped in all versions following 0.0.6 </strong>
+</section>

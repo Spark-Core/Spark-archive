@@ -1,0 +1,23 @@
+@media max-width: 600px) {
+    .total-center {
+        width: 90%;
+        margin: 50px auto;
+    }
+}
+
+.total-center {
+    width: 1150px;
+    margin: 100px auto;
+}
+.title.is-5 {
+    margin-top: 25px !important;
+}
+.content-height {
+    min-height: calc(100vh - 50px);
+}
+.footer {
+    padding: 1rem 1.5rem 1rem !important;
+}
+.icon-big {
+    height: 100px;width: 100px;float: right;
+}

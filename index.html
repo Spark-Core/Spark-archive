@@ -1,0 +1,23 @@
+---
+layout: homepage
+---
+
+
+<div class="total-center box">
+    <img class="icon-big" src="/icons/Spark-icon-no-bg.png">
+    <h1 class="title">Change the documentation version</h1>
+    <h1 class="subtitle">See outdated documenation.</h1>
+    <p class="title is-5">Current version: 0.1</h1>
+
+    <div class="content">
+        <a class="button is-link" onclick="redirect('0.1')">0.1</a>
+        <a class="button" onclick="redirect('0.0.6')">0.0.6</a>
+    </div>
+
+</div>
+<script>
+    function redirect(version){
+        if(version == "0.1"){return window.location = "https://discordspark.tk/"}
+        window.location = "/" + version
+    }
+</script>

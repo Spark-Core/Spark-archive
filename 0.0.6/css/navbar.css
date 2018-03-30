@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.navbar-item img {
+    border-radius: 50%;
+    max-height: 2rem;
+}
+
+.navbar-item h1 {
+    color: #fff
+}
+
+.navbar-item {
+    font-family: "Roboto"
+}
+
+#index {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.scrollTop {
+    width: 75px;
+    height: 75px
+}
+
+#toTop {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.is-selected {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#install-npm {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.225rem;
+}
+
+#column-left-button {
+    width: 100%;
+}
+
+#column-right-button {
+    width: 100%;
+    min-width: 95%;
+}
+
+.icon-button {
+  margin-right: 8px!important;
+}
+.content-height {
+    min-height: calc(100vh - 50px);
+}
+.footer {
+    padding: 1rem 1.5rem 1rem !important;
+}
+.is-purple {
+    background-color: #4B0082 !important;
+    color: white !important;
+}
+.hero.is-purple .title {
+    color: white !important;
+}
+.hero.is-purple .subtitle {
+    color: white !important;
+}
+.is-purple .navbar-item {
+    color: white !important;
+}
+.tags {
+    margin-bottom: 0 !important;
+}
+.tags:not(.has-addons){
+    margin-right: 5px;
+}
+.tag {
+    margin-bottom: 0 !important;
+}
+.tags-block .tags {
+    margin-left: 5px;
+}
+
+.tags:last-child {
+
+    margin-bottom: 0 !important;
+}
+.button.is-purple {
+    border-color: transparent;
+}

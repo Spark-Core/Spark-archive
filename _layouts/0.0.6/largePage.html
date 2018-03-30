@@ -1,0 +1,26 @@
+---
+layout: 0.0.6/default
+version: 0.0.6
+---
+<!-- opening hero -->
+<section class="hero {{ page.color }} is-medium">
+
+    <div class="hero-body ">
+        <div class="container">
+            {% include {{ page.column }} %}
+        </div>
+    </div>
+</section>
+{% if page.menu %} {% include {{page.menu}} %} {%endif%}
+    <div style="border-radius: 0; margin-bottom: 0;" class="notification is-warning">
+    <p class="has-text-centered">
+You are currently looking at an outdated version (<strong>{{layout.version}}</strong>) of the website.<br>
+      <a href="/"> Click here to view the latest version</a>
+    </p>
+  </div>
+  <section class="section">
+    <div class="container">
+        {{content}}
+    </div>
+</section>
+<!-- opening hero end -->
