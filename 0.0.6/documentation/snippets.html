@@ -1,0 +1,41 @@
+---
+layout: 0.0.6/largePage
+column: 0.0.6/headers/documentation.html
+color: is-warning
+title: Snippets
+subtitle: Functions you can use in the whole framework.
+menu: 0.0.6/menus/documentation/documentation.html
+---
+
+<section class="section">
+<h1 class="title"> Snippets</h1>
+<p>Snippets are functions that can be used throughout your whole code.</p>
+<br>
+<h1 class="title"> Creating snippets</h1>
+<pre>exports.name = "name"
+exports.function = function(){
+
+// Use this as a regular function
+
+}</pre>
+
+</section>
+<section class="section">
+    <h1 class="title"> Possible exports</h1>
+    <div class="content" <ul>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .name <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">String</span></div><span class="tag is-danger">Required</span></div></h3>
+            <p> Describes the name of the snippet. <i class="fas fa-exclamation-circle"></i> Must be unique</p>
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .function <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">function</span></div><span class="tag is-danger">Required</span></div></h3>
+            <p>The function that will run when you use the snippet.</p>
+        </li>
+        </ul>
+    </div>
+    <h1 class="title">Using snipppets</h1>
+    <p> To use a snippet in your code use it like this: </p>
+        <code>client.snippets.name()</code>
+        <p> To get a list of your snippets, use this: </p>
+        <code>client.snippets.list()</code>
+</section>

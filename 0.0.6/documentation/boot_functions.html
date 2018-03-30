@@ -1,0 +1,46 @@
+---
+layout: 0.0.6/largePage
+column: 0.0.6/headers/documentation.html
+color: is-warning
+title: Boot functions
+subtitle: Exectute acions at startup.
+menu: 0.0.6/menus/documentation/documentation.html
+---
+
+<section class="section">
+    <h1 class="title"> Creating a boot function </h1>
+    <p> To create a boot function you will have to create a new .js file inside the functions/boot folder.<br> This is what a default boot function looks like. </p>
+    <br>
+    <pre>exports.name = "name";
+exports.time = 0
+exports.delay = 0;
+
+exports.function = function(client) {
+
+  // execute your code on boot here.
+
+}</pre>
+</section>
+<section class="section">
+    <h1 class="title"> Possible exports</h1>
+    <div class="content" <ul>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .name <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">String</span></div><span class="tag is-danger">Required</span></div></h3>
+            <p> Describes the name of the message function. <i class="fas fa-exclamation-circle"></i> Must be unique</p>
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .time <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">Number / null</span></div><div class="tags has-addons"><span class="tag is-purple">Default</span><span class="tag">0</span></div></div></h3>
+            <p> time before a command will be re-executed, this number is in milliseconds. Use <code>0</code> to disable.</p>
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .delay <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">Number / null</span></div><div class="tags has-addons"><span class="tag is-purple">Default</span><span class="tag">0</span></div></div></h3>
+            <p> How much delay there will be before this boot function will run, starts running after ready event is fired. This number is in milliseconds. Use <code>0</code> to disable.</p>
+        </li>
+        <li>
+            <h3 class="subtitle"><div class="tags tags-block"> .function <div class="tags has-addons"><span class="tag is-link">Type</span><span class="tag">function</span></div><span class="tag is-danger">Required</span></div></h3>
+            <p> Code that will be executed before a command runs.</p>
+        </li>
+
+        </ul>
+    </div>
+</section>

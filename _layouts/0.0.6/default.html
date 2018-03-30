@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spark | Powerful modular framework Discord bot framework.</title>
+    <link rel="icon" href="/0.0.6/icons/Spark-icon-no-bg.png">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+    <link rel="stylesheet" href="/0.0.6/css/navbar.css">
+    <script src="/0.0.6/js/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <script src="/0.0.6/js/navbar.js"></script>
+    <nav class="navbar {{page.color}} is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/0.0.6">
+            <img src="/icons/Spark-icon-no-bg.svg" width="32" height="32">
+        </a>
+                <a target="_blank" href="https://github.com/Sparkbots" class="navbar-item is-hidden-desktop"><span class="icon"><i class="fab fa-github"></i></span></a>
+                <a target="_blank" href="https://discord.gg/TezD2Zg" class="navbar-item is-hidden-desktop"><span class="icon"><i class="fab fa-discord"></i></span></a>
+
+                <div data-target="navMenu" class="navbar-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-start">
+                    <a href="/0.0.6" class="navbar-item"> Home </a>
+                    <a href="/0.0.6/documentation/intro" class="navbar-item"> Documentation </a>
+                </div>
+                <div class="navbar-end">
+                    <a target="_blank" href="https://github.com/Sparkbots" class="navbar-item is-hidden-mobile-only is-hidden-tablet-only"><span class="icon"><i class="fab fa-github"></i></span></a>
+                    <a target="_blank" href="https://discord.gg/TezD2Zg" class="navbar-item is-hidden-mobile-only is-hidden-tablet-only"><span class="icon"><i class="fab fa-discord"></i></span></a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar end -->
+    <div class="content-height">
+    {{content}}
+    </div>
+
+    <!-- closing file -->
+
+    <!-- footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                    <a href="https://github.com/sparkbots/">Sparkbots</a> &copy; 2018 | <a href="https://github.com/TobiasFeld22/Spark">Framework</a> | <a href="https://github.com/Sparkbots/Spark-documentation/">Website</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer end -->
+
+
+
+</body>
+
+</html>
+<!-- closing file end -->
