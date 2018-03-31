@@ -8,6 +8,7 @@ install:
 
 script:
     - jekyll build
+    - echo "archive.discordspark.tk" > ./_site/CNAME
 
 deploy:
     provider: pages
